@@ -1,0 +1,716 @@
+/* Container for the main section */
+.container {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+  transition: all 0.3s ease;
+}
+
+/* Left circle with image */
+.leftCircle {
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-right: 60px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  animation: fadeInScale 1s ease-out;
+  border: 16px solid #7e553f;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.leftCircle:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Decorative circles */
+.decorativeCircle1, .decorativeCircle2 {
+  position: absolute;
+  background: #BFA48A;
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.decorativeCircle1 {
+  top: 60px;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  animation-delay: 0.2s;
+}
+
+.decorativeCircle2 {
+  bottom: 40px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0.4s;
+}
+
+/* Right content styles */
+.rightContent {
+  max-width: 540px;
+  position: relative;
+  animation: slideInRight 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0 16px;
+}
+
+/* Title */
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #4B3A2F;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #4B3A2F;
+  margin: 32px 0;
+  text-align: center;
+  letter-spacing: 0.7px;
+  opacity: 0.8;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Role tag */
+.role {
+  display: inline-block;
+  background: #0f0a9d;
+  color: #fff;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 16px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.role:hover {
+  background: #6a5acd;
+}
+
+/* Description */
+.description {
+  color: #4B3A2F;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  max-width: 480px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+  opacity: 0.9;
+  margin-top: 24px;
+  transition: transform 0.3s ease;
+}
+
+.description:hover {
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 16px;
+  }
+  .leftCircle {
+    margin: 0 0 32px 0;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .rightContent {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  .description {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* Thank You Section */
+.thankYouSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;
+  background: #f4f5fb;
+}
+
+.thankYouContainer {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.thankYouLeft {
+  flex: 1;
+  background: linear-gradient(135deg, #b993d6 0%, #8ca6db 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  position: relative;
+}
+
+.thankYouCircle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px rgba(137, 151, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.thankYouCircleText {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  color: #4B3A2F;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.thankYouRight {
+  flex: 1.5;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 40px;
+}
+
+.thankYouMessage {
+  font-size: 2rem;
+  color: #5a3d2b;
+  margin-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.thankYouName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4B3A2F;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.thankYouButton {
+  background: #6d4b3e;
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(137, 151, 255, 0.18);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.thankYouButton:hover {
+  background: #4B3A2F;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .thankYouContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .thankYouLeft, .thankYouRight {
+    width: 100%;
+    padding: 32px 16px;
+    min-height: unset;
+  }
+  .thankYouRight {
+    padding: 32px 16px;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.thankYouCircle {
+  animation: fadeInScale 1s ease;
+}
+
+.thankYouImg {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 0 auto;
+  animation: fadeInScale 1.2s 0.2s ease backwards;
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.thankYouRight {
+  animation: slideInRight 1.1s 0.3s cubic-bezier(.23,1.01,.32,1) backwards;
+}
+.thankYouButton {
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.thankYouButton:hover {
+  background: #4B3A2F;
+  transform: translateY(-2px) scale(1.07);
+  box-shadow: 0 8px 24px rgba(137, 151, 255, 0.18);
+}
+
+
+
+
+
+
+
+/* skill section */
+/* Icon Skills Section */
+.iconSkillsSection {
+  background: #faf6f2;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  position: relative; /* To position the arrows */
+}
+
+/* Scroll buttons */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #7b5b3e;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.scroll-button:hover {
+  background-color: #4b3a2f;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Position for the left (previous) button */
+.scroll-button.left {
+  left: 10px;
+}
+
+/* Position for the right (next) button */
+.scroll-button.right {
+  right: 10px;
+}
+
+/* Icon Skills Carousel */
+.iconCarouselContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.iconSkillItem {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iconSkillItem:hover {
+  transform: translateY(-10px);
+}
+
+/* Arrow animations */
+.scroll-button:before {
+  content: '←';
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Right arrow */
+.scroll-button.right:before {
+  content: '→';
+}
+
+/* Skill Journey Section */
+.skillsJourneyWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skillsJourneyHeading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #4b3a2f;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.skillsJourneyContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 40px;
+}
+
+.skillsJourneyItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skillsJourneyItem:hover {
+  transform: translateY(-8px); /* Slight hover effect */
+}
+
+.skillsLeftSide {
+  justify-content: flex-start;
+  margin-right: 40px;
+}
+
+.skillsRightSide {
+  justify-content: flex-end;
+  margin-left: 40px;
+}
+
+.skillsJourneyMarker {
+  width: 14px;
+  height: 14px;
+  background: #7b5b3e;
+  border-radius: 50%;
+  border: 3px solid #faf6f2;
+  box-shadow: 0 0 0 4px #e3d3c2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.skillsJourneyDetails {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 320px;
+  min-width: 220px;
+  box-sizing: border-box;  /* Ensure padding doesn't increase width */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skillsJourneyDetails h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #4b3a2f;
+}
+
+.skillsJourneyDetails p {
+  font-size: 1.1rem;
+  color: #4b3a2f;
+  margin-top: 8px;
+}
+
+.skillsIconImage {
+  margin-top: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Vertical line for the journey */
+.skillsJourneyContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #e3d3c2;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .skillsJourneyItem {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skillsJourneyDetails {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .skillsJourneyContent {
+    padding-left: 20px;  /* Reduce padding */
+    padding-right: 20px;  /* Reduce padding */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .skillsJourneyContent::before {
+    left: 50%;  /* Center the line on small screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .skillsJourneyHeading {
+    font-size: 1.8rem;
+  }
+
+  .skillsJourneyDetails h4 {
+    font-size: 1.8rem;
+  }
+
+  .skillsJourneyDetails p {
+    font-size: 1rem;
+  }
+
+  .skillsJourneyItem {
+    margin-bottom: 24px;
+  }
+}
+
+/* Scrollbar for the Icon Skills Section */
+.iconCarouselContainer::-webkit-scrollbar {
+  height: 8px;
+  background-color: #faf6f2;
+}
+
+.iconCarouselContainer::-webkit-scrollbar-thumb {
+  background-color: #7b5b3e;
+  border-radius: 8px;
+}
+
+.iconCarouselContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #4b3a2f;
+}
+
+
+
+
+
+
+/* mobile view  */
+/* @media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .thankYouButton {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .decorativeCircle1, .decorativeCircle2 {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .thankYouContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .thankYouContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .thankYouButton {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .iconSkillsSection {
+    padding: 20px 0;
+  }
+  
+  .iconCarouselContainer {
+    gap: 10px;
+  }
+} */
