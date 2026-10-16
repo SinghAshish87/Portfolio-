@@ -16,13 +16,7 @@ const About = () => {
           <span className="about-title-deco"></span>
         </h1>
         <p className="about-desc">
-          Hey there! I'm Ashish Singh, a passionate web designer with a deep
-          love for blending art and technology. My journey into web design began
-          as a creative exploration, and over time, it has transformed into a
-          career dedicated to crafting visually stunning and user-centered
-          digital experiences. I believe in the power of design to tell
-          compelling stories and connect people with brands in meaningful ways.
-          Let's create something beautiful together!
+        Hey, I’m Ashish Singh, a passionate web designer who believes great design is more than just how a website looks — it’s about how it makes people feel. My journey into web design began with a curiosity for creativity and technology, which gradually grew into a passion for building meaningful digital experiences. I love transforming ideas into visually engaging, intuitive, and user-friendly websites that not only capture attention but also tell a story, communicate a brand’s identity, and create lasting connections with people. For me, every project is an opportunity to combine creativity, purpose, and innovation to turn visions into reality. Let’s create something meaningful, memorable, and beautiful together!
         </p>
 
         <div className="about-circle-small">
